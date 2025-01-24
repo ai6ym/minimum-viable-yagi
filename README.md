@@ -37,9 +37,17 @@ Mark the center of your director element and slide it into the remaining parasit
 
 Strip ¼” of insulation from each end of the wire to be used for the matching element. Bend the wire into a U-shape with a ¾” gap. Solder each end of the wire to each of the driven element sections through the notches in the fitting.
 
-Finally attach your coax cable; strip back about ¾” of the outer insulation and separate the braided shield from the center conductor. Strip about ¼” of insulation from the center conductor. Twist the braided shield into a wire and check for shorts between the braid and center conductor before continuing. Solder the inner conductor to one driven element section and solder the shield to the other section. Use plenty of flux and a high wattage iron.
+Next attach your coax cable; strip back about ¾” of the outer insulation and separate the braided shield from the center conductor. Strip about ¼” of insulation from the center conductor. Twist the braided shield into a wire and check for shorts between the braid and center conductor before continuing. Solder the inner conductor to one driven element section and solder the shield to the other section. Use plenty of flux and a high wattage iron.
+
+Finally add the matching element. Take your wire and form it into a U shape, strip off the ends and solder one to each of the two driven elements at the same point as the coax attachements. Since solder joints to the tape can be a little brittle you might consider adding some hot glue or other support here. That will make a break less likely but more difficult to repair. Your call on which is more important to you.
+
+![solder joints covered in glue, additional glue supporting the tape](https://github.com/ai6ym/yagi-printables/blob/main/imgs/driven_element.webp?raw=true)
 
 That’s it! Hook your new antenna up to your favorite antenna testing tool to check its performance. Adjust the spacing of the hairpin match and the position of the driven element fitting as needed to achieve low SWR in the frequencies you care most about.
+
+![completed antenna](https://github.com/ai6ym/yagi-printables/blob/main/imgs/2M_build.webp?raw=true)
+
+![SWR of antenna showing 1.5 at the band edges and 1.1 on the calling frequency](https://github.com/ai6ym/yagi-printables/blob/main/imgs/2m_s11.bmp?raw=true)
 
 ### More Designs
 
