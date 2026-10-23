@@ -1,0 +1,27 @@
+#!/bin/sh
+set -eu
+
+if command -v openscad >/dev/null 2>&1; then
+    exec openscad "$@"
+fi
+
+macos_openscad="/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD"
+if [ -x "$macos_openscad" ]; then
+    exec "$macos_openscad" "$@"
+fi
+
+for versioned_openscad in /Applications/OpenSCAD-*.app/Contents/MacOS/OpenSCAD; do
+    if [ -x "$versioned_openscad" ]; then
+        exec "$versioned_openscad" "$@"
+    fi
+done
+
+user_openscad="$HOME/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD"
+if [ -x "$user_openscad" ]; then
+    exec "$user_openscad" "$@"
+fi
+
+echo "OpenSCAD was not found." >&2
+echo "Install it from https://openscad.org/downloads.html" >&2
+echo "Expected either 'openscad' on PATH or OpenSCAD.app in Applications." >&2
+exit 127

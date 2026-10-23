@@ -1,0 +1,42 @@
+#!/bin/sh
+set -eu
+
+project_dir=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+validation_dir=$(mktemp -d)
+
+cleanup() {
+    if [ -n "$validation_dir" ] && [ -d "$validation_dir" ]; then
+        rm -rf -- "$validation_dir"
+    fi
+}
+trap cleanup EXIT HUP INT TERM
+
+model_count=0
+for model_path in "$project_dir"/models/*.scad; do
+    model_name=$(basename "$model_path" .scad)
+    output_path="$validation_dir/$model_name.stl"
+    log_path="$validation_dir/$model_name.log"
+
+    echo "Validating models/$model_name.scad"
+    if ! "$project_dir/scripts/openscad" -o "$output_path" "$model_path" \
+        >"$log_path" 2>&1; then
+        cat "$log_path"
+        exit 1
+    fi
+    cat "$log_path"
+
+    # OpenSCAD 2021.01 can return success after an assertion or geometry error,
+    # so the diagnostic stream is part of the validation contract.
+    if grep -q '^ERROR:' "$log_path"; then
+        echo "OpenSCAD reported an error for $model_path" >&2
+        exit 1
+    fi
+
+    if [ ! -s "$output_path" ]; then
+        echo "OpenSCAD produced no geometry for $model_path" >&2
+        exit 1
+    fi
+    model_count=$((model_count + 1))
+done
+
+echo "Validated $model_count OpenSCAD models"
