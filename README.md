@@ -30,7 +30,7 @@ See the LICENSE file for complete details.
 
 For the size of pipe and tape you have print one driven element block and two parasitic element blocks.
 
-Cut two ??? tape measurements for the driven element, one ??? director element, and one ??? reflector element.
+Cut two 17 3/4" tape measurements for the driven element, one 35 1/8" director element, and one 41 3/8" reflector element.
 
 Find, borrow, purchase, or steal ten #6 3/8" wood screws, two six inch zip ties, one coax pigtail with your desired connector (pro-tip: make pigtails by cutting commercial cables in half and stripping the ends), one 4 1/2" wire (the match element - solid copper is best, around 20AWG / 0.5mm2), and four #6 ring terminals.
 

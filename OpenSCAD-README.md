@@ -43,9 +43,9 @@ default fit-critical values are:
 
 - 21.336 mm actual pipe OD for the default 1/2-inch nominal pipe
 - 22.136 mm pipe bore, including 0.80 mm diametral FDM clearance
-- 19.85 x 1.43 mm tape slots for the default 3/4-inch blade; the thickness
+- 18.85 x 1.93 mm tape slots for the default 3/4-inch blade; the thickness
   clearance accommodates a coating on the blade end
-- 25.85 mm default height, derived from the slot plus 3.00 mm top/bottom walls
+- 24.85 mm default height, derived from the slot plus 3.00 mm top/bottom walls
 - 2.25 mm default tape-blade crown depth
 - 2.70 mm self-tapping pilot holes for #6 wood screws
 - 5.50 mm rectangular PVC-housing wall around the round bore
@@ -65,7 +65,7 @@ Tape crown depth, slot-bar thickness, terminal position, housing size, bar
 length, and overall height derive from those selections.
 
 The part is designed to print upright on its flat rectangular base with
-no supports. The horizontal tape pockets bridge only 1.43 mm, and the radial
+no supports. The horizontal tape pockets bridge only 1.93 mm, and the radial
 screw pilots are small enough to bridge cleanly on a typical FDM printer.
 Both tape channels pass completely through their bars, allowing tape to extend
 in both directions. The retained channel has one face-bearing screw centered

@@ -30,11 +30,11 @@ pipe_bore_edge_chamfer = 0.8;
 collar_wall = 5.5;
 collar_body_size = pipe_bore_diameter + 2 * collar_wall;
 
-// Tape blade and intentionally loose FDM clearances.
+// Tape blade and FDM fit adjustments.
 tape_width = tape_width_inches * INCH;
 tape_thickness = 0.20;
-tape_width_clearance = 0.80;
-tape_thickness_clearance = 1.23;
+tape_width_clearance = -0.20;
+tape_thickness_clearance = 1.73;
 tape_slot_height = tape_width + tape_width_clearance;
 tape_slot_width = tape_thickness + tape_thickness_clearance;
 tape_slot_vertical_wall = 3.0;
